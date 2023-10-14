@@ -4,6 +4,14 @@
 [Cwiczenie 1_4_9_1](cwiczenia/cwiczenie_1_4_9_1.md)
 
 
+```python
+
+if x := 1 < 2:
+    print("udało się")
+print(x)
+
+```
+
 Masz daną listę liczb i chcesz znaleźć pierwszą liczbę większą od 10, a jednocześnie chcesz wiedzieć, na którym miejscu w liście ta liczba się znajduje.
 
 1. Utwórz listę liczb:
