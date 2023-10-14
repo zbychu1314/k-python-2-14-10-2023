@@ -22,3 +22,6 @@ master -A - --------------------------
            \                        / (git merge drugawersja)
 		     drugawersja - B - C - D
 ```
+
+zaczynam cos...
+skonczylem cos
