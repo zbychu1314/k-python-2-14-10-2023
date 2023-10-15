@@ -16,4 +16,4 @@ osoby = [
 ]
 ```
 
-Napisz funkcję, która przyjmie listę `osoby` i zwróci słownik, gdzie kluczem będzie zawód, a wartością lista osób o danym zawodzie.
+Napisz funkcję, która przyjmie listę `osoby` i zwróci słownik, gdzie kluczem będzie zawód, a wartością lista imion osób o danym zawodzie.
