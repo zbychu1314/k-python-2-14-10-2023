@@ -1,0 +1,7 @@
+INFO:__main__:Wywo\u0142uj\u0119 funkcj\u0119 dodaj z parametrami x= 3, y=4 
+INFO:__main__:Wywo\u0142uje funkcj\u0119 dodaj z parametrami x= 3, y=4 
+INFO:__main__:Wywoluje funkcje dodaj z parametrami x= 3, y=4 
+INFO:__main__:Wywoluje funkcje podziel z parametrami x= 4, y=0 
+ERROR:__main__:Dzielenie przez zero
+ERROR:__main__:Niespodziewany blad '1'
+INFO:__main__:Wywoluje funkcje pomnoz z parametrami x= 3, y=4 
