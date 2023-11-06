@@ -19,8 +19,7 @@ class Circle:
         """
         if not (isinstance(radius, (int, float)) and radius > 0):
             raise ValueError(
-                f"Promien kola nie moze byc ujemny lub 
-                wprowadzona wartosc to nie int albo float {radius}"
+                f"Promien kola nie moze byc ujemny lub wprowadzona wartosc to nie int albo float {radius}"
             )
         else:
             self._radius = radius
@@ -66,45 +65,71 @@ class Circle:
         reprezentacja instacji klasy Circle"""
         return f"Okrąg o promieniu {round(self._radius ,2)}, średnicy {round(self.diameter,2)} i polu powierzchni {round(self.area,2)}"
 
+    def __eq__(self, value: object) -> bool:
+        """
+        Funkcja weryfikuje czy instancje klasy circle są sobie równe 
+    
+        :value: Circle obiekt klasy Circle 
+        :returns: bool 
+        """
+        if isinstance (value, Circle):
+            return self._radius == value._radius
+    
+    def __ne__(self, value: object) -> bool:
+        """
+        Funkcja weryfikuje czy instancje klasy circle nie są sobie równe 
+    
+        :value: Circle obiekt klasy Circle 
+        :returns: bool 
+        """
+        if isinstance (value, Circle):
+            return self._radius != value._radius
+    
+    def __lt__(self, value: object) -> bool:
+        """
+        Funkcja weryfikuje czy promien koła klasy circle jest mniejszy niż inny obiekt tej samej klasy 
+    
+        :value: Circle obiekt klasy Circle 
+        :returns: bool 
+        """
+        if isinstance (value, Circle):
+            return self._radius < value._radius
+    
+    def __le__(self, value: object) -> bool:
+        """
+        Funkcja weryfikuje czy promien koła klasy circle jest mniejszy bądź równy niż inny obiekt tej samej klasy 
+    
+        :value: Circle obiekt klasy Circle 
+        :returns: bool 
+        """
+        if isinstance (value, Circle):
+            return self._radius <= value._radius
+
+    def __gt__(self, value: object) -> bool:
+        """
+        Funkcja weryfikuje czy promien koła klasy circle jest większy niż inny obiekt tej samej klasy 
+    
+        :value: Circle obiekt klasy Circle 
+        :returns: bool 
+        """
+        if isinstance (value, Circle):
+            return self._radius > value._radius
+    
+    def __ge__(self, value: object) -> bool:
+        """
+        Funkcja weryfikuje czy promien koła klasy circle jest mniejszy bądź równy niż inny obiekt tej samej klasy 
+    
+        :value: Circle obiekt klasy Circle 
+        :returns: bool 
+        """
+        if isinstance (value, Circle):
+            return self._radius >= value._radius
 
 if __name__ == "__main__":
-    c = Circle(5)
-    print(c)
-    # Okrąg o promieniu: 5
-    c.radius
-    #    5
-    c.diameter
-    #   10
-    c.area
-    # 78.54  # Pole powinno być obliczone i zaokrąglone do dwóch miejsc po przecinku dla wyświetlenia
-
-    # Domyślna wartość promienia
     c = Circle()
-    print(c.radius)
-    # 1
-    print(c.diameter)
-    # 2
-
-    # Zmiana promienia odzwierciedla się na średnicy i polu
-    c = Circle(2)
-    c.radius = 1
-    print(c.diameter)
-    # 2
-    print(c.area)
-    # 3.14  # Dla celów wyświetlania
-
-    # Ustawienie średnicy wpływa na promień
-    c = Circle(1)
-    c.diameter = 4
-    print(c.radius)
-    # 2.0
-
-    # Ustawienie pola wpływa na promień
-    c = Circle(1)
-    c.area = math.pi * 5**2
-    print(c.radius)
-    #    5.0
-
-    # Walidacja promienia
-    c = Circle(5)
-    c.radius = -2
+    d = Circle(2)
+    #print(c==d)
+    print(c==d)
+    print(c>d)
+    print(c<=d)
+    
