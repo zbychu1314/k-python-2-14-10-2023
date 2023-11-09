@@ -235,15 +235,13 @@ def test_figure__add__():
     f3 = s1 + c1
     print(type(f3))
     assert f3.area == 4.14
-    
+
     s1 = Square(1)
     with pytest.raises(TypeError):
         s1 + 2
-    
+
     with pytest.raises(TypeError):
-        'sss' + s1
-
-
+        "sss" + s1
 
 
 def test_square_init():
@@ -354,7 +352,7 @@ def test_circle_radius():
     Funkcja testujaca dla property radius z klasy Circle
 
     :args: NONE
-    :returns: NO
+    :returns: NONE
     """
     c = Circle()
     assert c._radius == 1
@@ -375,7 +373,7 @@ def test_circle_diameter():
     Funkcja testujaca dla property diameter z klasy Circle
 
     :args: NONE
-    :returns: NO
+    :returns: NONE
     """
     c = Circle()
     assert c.diameter == 2
@@ -395,7 +393,7 @@ def test_circle_area():
     Funkcja testujaca dla property area z klasy Circle
 
     :args: NONE
-    :returns: NO
+    :returns: NONE
     """
     c = Circle(2)
     assert c.area == 4 * PI
@@ -413,7 +411,7 @@ def test_circle_perimeter():
     Funkcja testujaca dla property perimeter z klasy Circle
 
     :args: NONE
-    :returns: NO
+    :returns: NONE
     """
     c = Circle(2)
     assert c.perimeter == 4 * PI
@@ -430,7 +428,7 @@ def test_circle_get_perimeter():
     Funkcja testujaca dla funkcji get_perimeter z klasy Circle
 
     :args: NONE
-    :returns: NO
+    :returns: NONE
     """
     c = Circle(2)
     assert c.get_perimeter() == 4 * PI
@@ -441,7 +439,7 @@ def test_circle_get_area():
     Funkcja testujaca dla funkcji get_perimeter z klasy Circle
 
     :args: NONE
-    :returns: NO
+    :returns: NONE
     """
     c = Circle(2)
     assert c.get_area() == 4 * PI

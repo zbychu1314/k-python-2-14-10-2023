@@ -1,6 +1,6 @@
 import math
 from abc import ABC, abstractmethod, abstractproperty
-import decimal
+
 
 PI = round(math.pi, 2)
 
@@ -135,7 +135,7 @@ class Figure(ABC):
         :other: Circle obiekt klasy Circle bad
         :returns: nowy obiekt klasy Circle
         """
-        
+
         if isinstance(self, Circle):
             if isinstance(other, Figure):
                 return Circle(math.sqrt((self.area + other.area) / PI))
@@ -145,7 +145,7 @@ class Figure(ABC):
             if isinstance(other, Figure):
                 return Square(math.sqrt(self.area + other.area))
             self.raise_type_error()
-    
+
     def __radd__(self, other) -> object:
         """
         Funkcja wywołuje funkcję raise_type_error() w sytuacji gdy nastąpi próba dodania do Obiektu klasy Figure innego obiektu niebędącego instancją klasy Figure
@@ -154,8 +154,9 @@ class Figure(ABC):
         :returns: NONE
         """
         if not isinstance(other, Figure):
-             self.raise_type_error()   
-        
+            self.raise_type_error()
+
+
 class Circle(Figure):
     """Circle class jest wykorzystywana do przechowywania danych klasy Circle.
 
@@ -357,17 +358,6 @@ class Square(Figure):
 
 
 if __name__ == "__main__":
- 
     s1 = Square(4)
     c1 = Square(2)
-    print(33+s1)
-
-#    import decimal
-## input floating-point number
-#    inputNumber = 4.140000000000001 
-## Converting the given number to decimal
-#    decimalValue = decimal.Decimal(inputNumber)
-## rounding the number upto 2 digits after the decimal point
-#    roundedNumber = decimalValue.quantize(decimal.Decimal('0.00'))
-#    print(roundedNumber)
-#    print("Rounding 4.140000000000001 upto 2 decimal places:", format(f3,".2f"))
+    print(33 + s1)
