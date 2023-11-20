@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Posts Details</h1>
+        <tbody>
+            <ul>
+                <li>Content: {{posts.content}}</li>
+                <li>Created: {{posts.created_at}}</li>
+                
+            </ul>
+        </tbody>
+{% endblock %}
+    

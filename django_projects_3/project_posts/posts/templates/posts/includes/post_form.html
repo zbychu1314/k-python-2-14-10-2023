@@ -1,0 +1,17 @@
+<div>
+    <form method="POST">
+        <form method="POST">
+            {% csrf_token %} 
+            <p>
+                <label for="title">Tittle</label>
+                <input id="p_title" type="text" name="pos_title" maxlength="255" required> 
+            </p>
+            <p>
+                <label for="content">Content</label>
+                <input id="p_content" type="text" name="pos_content" maxlength="255" required> 
+            </p>
+            <p>
+                <input type="submit" value="send">
+            </p>
+        </form>
+</div>

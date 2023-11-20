@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Posts</h1>
+<table>
+    <thead>
+        <th>Tittle</th>
+        <th>Content</th>
+        <th>Created_at</th>
+        <th>Updated_at</th>
+    </thead>
+    <tbody>
+        {% for p in posts %}
+        <tr>
+            <td><a href="{% url 'posts:details' p.id %}">{{p.title}}</a></td>
+            <td>{{p.content}}</td>
+            <td>{{p.created_at}}</td>
+            <td>{{p.updated_at}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% include "posts/includes/post_form.html" %}
+
+{% endblock %}
