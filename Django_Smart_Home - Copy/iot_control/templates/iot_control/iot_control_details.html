@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>IOT Device Details</h1>
+        <tbody>
+            <ul>
+                <li>Name: {{iot_control.name}}</li>
+                <li>Device_ID: {{iot_control.device_id}}</li>
+                <li>Type: {{iot_control.type}}</li>
+                <li>Status: {{iot_control.status}}</li>
+                
+            </ul>
+            <ul>
+                <td><a href="{% url 'iot_control:connect' iot_control.id %}">Connect</a></td>
+                <td><a href="{% url 'iot_control:disconnect' iot_control.id %}">Disconnect</a></td>
+                <td><a href="{% url 'iot_control:status_update' iot_control.id %}">Status_update</a></td>
+            </ul>
+            <ul>
+            <td><a href="{% url 'iot_control:details' iot_control.id %}">Send_message</a></td>
+            </ul>
+        </tbody>
+{% endblock %}

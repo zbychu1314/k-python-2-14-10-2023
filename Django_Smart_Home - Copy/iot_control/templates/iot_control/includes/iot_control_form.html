@@ -1,0 +1,18 @@
+<div>
+    <form method="POST">
+        <form method="POST">
+            {% csrf_token %}
+            <p>
+                <label for="label"><u>Register new IOT Device</u></label>
+            </p> 
+            <p>
+                <label for="name">Name</label>
+                <input id="p_name" type="text" name="pos_name" maxlength="255" required> 
+                <label for="type">Type (hue_light,curtains,smartspeaker) </label>
+                <input id="p_type" type="text" name="pos_type" maxlength="255" required> 
+            </p>
+            <p>
+                <td><input type="submit" class="btn btn-primary" value="Register" name="_register"></td>
+            </p>
+        </form>
+</div>

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>IOT Devices Summary</h1>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Device_ID</th>
+        <th>Type</th>
+        <th>Status</th>
+    </thead>
+    <tbody>
+        {% for p in iot_control %}
+        <tr>
+            <td><a href="{% url 'iot_control:details' p.id %}">{{p.id}}</a></td>
+            <td>{{p.name}}</td>
+            <td>{{p.device_id}}</td>
+            <td>{{p.type}}</td>
+            <td>{{p.status}}</td>
+        </tr>
+        {% endfor %}
+        
+    </tbody>
+</table>
+<p>
+    <label for="label"><u>Actions log</u></label>
+</p>
+<p>
+    <a style="color:blue">{{command_output}}</a>
+</p>
+<ul>
+{% for message in command_output_list %}
+    <li>{{messagew}}</li>
+{% endfor %}
+</ul>
+{% include "iot_control/includes/iot_control_form.html" %}
+{% include "iot_control/includes/iot_control_form_unregister.html" %}
+{% include "iot_control/includes/iot_control_form_run.html" %}
+<ul>
+<td><a href="{% url 'iot_control:execute_test_diagnostics' %}">Test Diagnostics</a></td>
+</ul>
+
+{% endblock %}

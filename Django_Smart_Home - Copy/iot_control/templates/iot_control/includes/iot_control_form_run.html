@@ -1,0 +1,17 @@
+<div>
+    <form method="POST">
+        <form method="POST">
+            {% csrf_token %}
+            <p>
+                <label for="label"><u>Run Program </u></label>
+            </p> 
+            <p>
+                <label for="device_id">Program Name (wake_up,sleep)</label>
+                <input id="p_name" type="text" name="pos_program_name" maxlength="255" required> 
+            </p>
+            <p>
+                
+                <td><input type="submit" class="btn btn-primary" value="Run" name="_run_program"></td>
+            </p>
+        </form>
+</div>

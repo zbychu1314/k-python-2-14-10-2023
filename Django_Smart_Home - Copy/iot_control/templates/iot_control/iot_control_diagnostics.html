@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>IOT Device Diagnostics Check</h1>
+        <tbody>
+            <ul>
+                {% for x in Status %}
+                    <li>{{ x }}</li>
+                {% endfor %}      
+            </ul>
+        </tbody>
+{% endblock %}

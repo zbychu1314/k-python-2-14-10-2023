@@ -1,0 +1,16 @@
+<div>
+    <form method="POST">
+        <form method="POST">
+            {% csrf_token %}
+            <p>
+                <label for="label"><u>Unregister IOT Device</u></label>
+            </p> 
+            <p>
+                <label for="device_id">Device_ID</label>
+                <input id="p_name" type="text" name="pos_device_id" maxlength="255" required> 
+            </p>
+            <p>
+                <td><input type="submit" class="btn btn-primary" value="Unregister" name="_unregister"></td>
+            </p>
+        </form>
+</div>
